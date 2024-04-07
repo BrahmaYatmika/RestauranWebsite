@@ -124,14 +124,6 @@ body{
     justify-content: space-around;
   }
 
-  .container video{
-    max-width: 640px;
-    max-height: 360px;
-    background-color: #f0f0f0;
-    padding: 12px;
-    border-radius: 18px;
-  }
-
   .text-box{
     width: 429px;
     height: 252px;
