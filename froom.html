@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUTDEHELL</title>
+    <link href="img/pela6.jpg" rel="icon">
+</head>
+<body>
+    <div class="video-container">
+        <video width="1020" height="640" autoplay loop>
+            <source src="video/rick roll.mp4" type="video/mp4">
+        </video>
+        <div class="text-overlay">
+            <h1 id="rainbow-text">You Found It</h1>
+            <a href="index.html"><button>Balik Ngab</button></a><br><br><br>
+            <audio id="button-sound" src="audio/Cihuy.mp3"></audio>
+            <button onclick="toggleSound()">Cihuy</button>
+        </div>
+    </div>
+    <style>
+    body{
+        background-color: black;
+    }
+    
+    .video-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-overlay h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 6em;
+}
+
+.text-overlay a button{
+  background: white;
+    border: 1px solid #fff;
+    color: #000000;
+    font-size: 18px;
+    padding: 7px 17px;
+    border-radius: 6px;
+    transition: 0.5s all ease;
+}
+
+  img{
+    align-items: center;
+  }
+    </style>
+
+    <script>
+function changeTextColor() {
+  var text = document.getElementById("rainbow-text");
+  var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  text.style.color = randomColor;
+}
+
+setInterval(changeTextColor, 90);
+
+var sound = document.getElementById("button-sound");
+var isPlaying = false;
+
+function toggleSound() {
+  if (isPlaying) {
+    sound.pause();
+    sound.currentTime = 0;
+    isPlaying = false;
+  } else {
+    sound.play();
+    isPlaying = true;
+  }
+}
+
+    </script>
+</body>
+</html>

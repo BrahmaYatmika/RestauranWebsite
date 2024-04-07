@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" href="css/testi.css">
+	<title>✬5Star</title>
+</head>
+<body>
+	<audio id="myAudio" autoplay loop
+    src="audio/fish in the pool.mp3">
+    </audio>
+	<div class="main">
+    <div class="wrapper">
+        <div class="header">
+            <nav>
+                <div class="logo">
+                    <a href="">✬5Star</a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <a href="froom.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </ul>
+            </nav>
+            <div class="overlay">
+                <div class="content">
+                    <h1>Testimonial</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<div class="container">
+    <div class="testimonial">
+		<div class="testimonial-text">
+        <div class="user-text">
+			<i class="fas fa-quote-left"></i>
+			<p>Burgernyua wuenak pol rek, minumannyua juga rek seger polll</p>
+			<span>Rakun Jawa | CEO</span>
+        </div>
+
+        <div class="user-text">
+			<i class="fas fa-quote-left"></i>
+			<p>Burgernya enak dan minumannya juga enak, saya kasi raiting 9/11</p>
+			<span>Asep Asem | Jual Bakso Tanpa Tepung</span>
+        </div>
+
+        <div class="user-text active-text">
+			<i class="fas fa-quote-left"></i>
+			<p>Tidak bisa berkata-kata KAWAI>///<</p>
+			<span>Kawai>///< | Wibu</span>
+        </div>
+
+        <div class="user-text">
+			<i class="fas fa-quote-left"></i>
+			<p>Steaknya kok katos banget saya jadi suka dan juga minuman es tehnya agak ada rasa cabe, tapi saya suka kok</p>
+			<span>Hot Dog | Pegawai OYO</span>
+        </div>
+
+        <div class="user-text">
+			<i class="fas fa-quote-left"></i>
+			<p>saya sangat suka burgernya, dagingnya empuk dan banyak, saya juga suka minumannya sangat segar</p>
+			<span>Jas Kidding🧢 | Hengker</span>
+        </div>
+	</div>
+	<div class="testimonial-pic">
+        <img src="img/pela1.jpg" class="user-pic" onclick="showReview()">
+        <img src="img/pela2.jpg" class="user-pic active-pic" onclick="showReview()">
+        <img src="img/pela3.jpg" class="user-pic" onclick="showReview()">
+        <img src="img/pela6.jpg" class="user-pic" onclick="showReview()">
+        <img src="img/pela5.jpg" class="user-pic" onclick="showReview()">
+	</div>
+    </div>
+	</div>
+    
+	<script src="js/scipt.js"></script>
+    <!-- mengatur audio -->
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function playAudio(){
+            audio.play();
+        }
+
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPossition', audio.currentTime);
+        });
+
+        window.addEventListener('Load', function(event) {
+            var savedPossition = sessionStorage.getItem('audioPossition');
+            if (savedPossition !== null) {
+            }
+            playAudio();
+        });
+    </script>
+    <!-- end mengatur audio -->
+</body>
+</html>

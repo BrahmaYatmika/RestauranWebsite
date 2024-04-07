@@ -1,0 +1,341 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main{
+    width: 100%;
+  }
+  
+  nav{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+    backdrop-filter: blur(5px);
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo a{
+    font-size: 39px;
+    color: red;
+    font-weight: bold;
+    margin-left: 50px;
+    scale: 50%;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.5s all;
+  }
+  
+  ul{
+    margin: 0px;
+    margin-right: 30px;
+  }
+  
+  ul li{
+    float: left;
+    padding: 0px 15px;
+    list-style: none;
+  }
+  
+  ul li a:hover{
+    color: rgb(187, 73, 61);
+  }
+  
+  .header{
+    background-image: url(carousel-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .content h1{
+    font-size: 50px;
+  }
+  
+  .content p{
+    padding: 0px 70px;
+    font-size: 20px;
+  }
+  
+  button{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 6px;
+    transition: 0.5s all ease;
+  }
+  
+  button:hover{
+    background: black;
+    color: rgb(255, 255, 255);
+  }
+  
+  .overlay{
+    background: rgba(0,0,0,.6);
+    height: 100vh;
+  }
+  
+    .menusss{
+    text-align: center;
+    color: wheat;
+  }
+
+    .menus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+    .single-menu{
+    text-align: center;
+    flex-basis: 32%;
+}
+
+.single-menu h2{
+    background-color: #9d584c;
+    color: #fff;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.menu-box{
+    border: 1px solid #ddd;
+    margin: 35px 0;
+    padding: 20px 0;
+    border-bottom: 3px solid #ddd;
+}
+
+.menu-box img{
+    max-width: 100px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 3px;
+    transition: .5s;
+}
+
+.menu-box h4{
+    text-transform: capitalize;
+    font-size: 22px;
+    margin: 10px 0;
+    padding: 10px;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+}
+
+.menu-box h4 span{
+    color: tomato;
+    font-style: italic;
+}
+
+.menu-box img:hover{
+    border-radius: 15%;
+    transform: scale(1.2);
+}
+
+.buttons {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.cart-button {
+  position: relative;
+  outline: 0;
+  background-color: rgb(189, 141, 52);
+  color: #fff;
+  border: none;
+  height: 48px;
+  width: 168px;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 0px;
+  overflow: hidden
+}
+
+.cart-button:focus {
+  outline: none !important
+}
+
+.cart-button .fa-plus {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 22%;
+  font-size: 1.2em;
+  transform: translate(-50%, -50%)
+}
+
+.cart-button .fa-circle-thin {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: -20%;
+  font-size: 1.5em;
+  transform: translate(-50%, -50%)
+}
+
+.cart-button .fa-check {
+  position: absolute;
+  z-index: 1;
+  top: -52%;
+  left: 20%;
+  font-size: 0.7em;
+  transform: translate(-50%, -50%)
+}
+
+.cart-button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 15px
+}
+
+.section-text h2{
+  display: flex;
+  align-items: center;
+}
+
+.cart-button span.added {
+  opacity: 0
+}
+
+.cart-button.clicked .fa-plus {
+  animation: addicon 1s ease-in forwards
+}
+
+.cart-button.clicked {
+  animation: color 1s ease-in forwards
+}
+
+.cart-button.clicked .fa-circle-thin {
+  animation: circle 1s ease-in forwards
+}
+
+.cart-button.clicked .fa-check {
+  animation: check 1s ease-in forwards
+}
+
+.cart-button.clicked span.add-to-cart {
+  animation: addcart 1s ease-in forwards
+}
+
+.cart-button.clicked span.added {
+  animation: added 1s ease-in forwards
+}
+
+@keyframes addicon {
+  0% {
+      opacity: 1
+  }
+
+  30%,
+  100% {
+      opacity: 0
+  }
+}
+
+@keyframes circle {
+  0% {
+      left: -10%
+  }
+
+  100% {
+      left: 20%
+  }
+}
+
+@keyframes check {
+
+  0%,
+  40% {
+      top: -20%
+  }
+
+  60% {
+      top: 48%
+  }
+
+  100% {
+      top: 48%
+  }
+}
+
+@keyframes addcart {
+
+  0%,
+  30% {
+      opacity: 1
+  }
+
+  30%,
+  100% {
+      opacity: 0
+  }
+}
+
+@keyframes added {
+
+  0%,
+  80% {
+      opacity: 0
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+@keyframes color {
+  0% {
+      background-color: rgb(189, 141, 52)
+  }
+
+  80%,
+  100% {
+      background-color: rgb(75, 221, 75)
+  }
+}
+
+header{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+header a{
+  color: salmon;
+}
+
+h1 span{
+  color: rgb(0, 0, 0);
+}
+.fa-solid, .fas {
+  font-weight: 900;
+  margin-left: 10px;
+  padding: 32px;
+  color: wheat;
+}

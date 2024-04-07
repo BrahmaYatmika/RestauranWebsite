@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✬5Star</title>
+    <link href="css/about.css" rel="stylesheet">
+    <link href="img/loicon.jpg" rel="icon">
+    <script src="js/scipt.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <audio id="myAudio" autoplay loop
+    src="audio/fish in the pool.mp3">
+    </audio>
+    <div class="main">
+        <div class="wrapper">
+            <div class="header">
+                <nav>
+                    <div class="logo">
+                        <a href="">✬5Star</a>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="testimoni.html">Testimoni</a></li>
+                        <a href="froom.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </ul>
+                </nav>
+                <div class="overlay">
+                    <div class="content">
+                        <h1>About</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <h2>About Restaurant</h2>
+        <div class="container">
+            <video width="330" height="185" loop autoplay muted title="Membuat Burger Abangku🔥">
+            <source src="video/burger.mp4" type="video/mp4">
+            </video>
+                <div class="text-box">
+                    <h4>Restoran ✬5Star telah dibuka sejak tahun 2001 oleh JMK Rehan, pada saat itu restoran ✬5Star telah menjadi restoran terbaik di Jakarta. Restoran ✬5Star terletak di tempat yang tenang di sepanjang jalan. Restoran ✬5Star menyajikan makanan, snack, dan minuman, dan berharap dapat mengubah pengalaman berbagi sambil memikat imajinasi dan selera setiap tamu.</h4>
+                </div>
+            <video width="330" height="185" loop autoplay muted title="Membuat Spageti Abangku🔥">
+            <source src="video/spageti.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <header>
+        <p>Made <span class="hinput"></span> by <a href="froom.html">Brahma </a>and <a href="">Aris</a></p>
+    </header 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".hinput",{
+            strings : ["❤️","🧠","💻"],
+            typeSpeed: 350,
+            backSpeed: 50,
+            loop: true
+        })
+    </script>
+        <!-- mengatur audio -->
+        <script>
+            var audio = document.getElementById("myAudio");
+    
+            function playAudio(){
+                audio.play();
+            }
+    
+            window.addEventListener('beforeunload', function(event) {
+                sessionStorage.setItem('audioPossition', audio.currentTime);
+            });
+    
+            window.addEventListener('Load', function(event) {
+                var savedPossition = sessionStorage.getItem('audioPossition');
+                if (savedPossition !== null) {
+                }
+                playAudio();
+            });
+        </script>
+        <!-- end mengatur audio -->
+</body>
+</html>
