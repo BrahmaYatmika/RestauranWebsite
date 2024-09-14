@@ -162,7 +162,7 @@ h1 span{
 
 .caption {
     text-align: center;
-    transform: translateY(-90px);
+    transform: translateY(-112px);
     opacity: 0;
     pointer-events: none;
     transition: all .5s;
